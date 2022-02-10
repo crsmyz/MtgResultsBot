@@ -4,7 +4,9 @@
   "description": "Twitter bot that tweets when MTGO Legacy event results are published on reddit.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "start": "ts-node-dev --respawn main.ts"
   },
   "repository": {
     "type": "git",
@@ -15,7 +17,24 @@
   "dependencies": {
     "axios": "^0.25.0",
     "cheerio": "^1.0.0-rc.2",
-    "twit": "^2.2.11"
+    "eslint": "^4.19.1",
+    "merge-images": "^1.1.0",
+    "merge-img": "^2.1.2",
+    "mtgsdk": "^0.3.0",
+    "mtgtop8": "^0.3.1",
+    "promise": "^8.0.2",
+    "ts-node": "^10.4.0",
+    "ts-node-dev": "^1.1.8",
+    "twit": "^2.2.11",
+    "twitter-node-client": "0.0.6",
+    "typescript": "^4.5.4",
+    "undici": "^4.13.0"
+  },
+  "devDependencies": {
+    "@types/cheerio": "^0.22.30",
+    "@types/merge-img": "^2.1.1",
+    "@types/request": "^2.48.8",
+    "@types/twit": "^2.2.30"
   },
   "bugs": {
     "url": "https://github.com/crsmyz/MtgoResultsBot/issues"

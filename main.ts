@@ -10,7 +10,7 @@ const Twitter = new Twit(
         access_token: process.env.BOT_ACCESS_TOKEN,
         access_token_secret: process.env.BOT_ACCESS_TOKEN_SECRET
     }
-)
+);
 
 // get mtg, get images, merge image and tweet: 'bootstrap async function for bot'
 (async () => {
