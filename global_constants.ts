@@ -1,0 +1,1 @@
+export const REDDIT_RSS: string = "https://www.reddit.com/user/kronicler1029.rss";
