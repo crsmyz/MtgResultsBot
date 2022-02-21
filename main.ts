@@ -3,7 +3,7 @@ import Parse from "rss-parser";
 import { TwitterApi } from 'twitter-api-v2';
 import { checkIfRedditPostMatchesToday } from "./checkIfRedditPostMatchesToday";
 import { formatDataForTweet} from "./formatDataForTweet";
-import { tweetIsSuccessful } from "./logWhenTweetIsSuccessful";
+import { logWhenTweetIsSuccessful } from "./logWhenTweetIsSuccessful";
 import { logNoChanges} from "./logNoChanges";
 import { logAndThrowError } from "./logAndThrowError";
 
@@ -24,7 +24,7 @@ const client = new TwitterApi({
         const resp: any = await parser.parseURL(REDDIT_RSS);
         if (resp && checkIfRedditPostMatchesToday(new Date(resp.items[0].pubDate))) {
           await client.v1.tweet(formatDataForTweet(resp));
-          tweetIsSuccessful();
+          logWhenTweetIsSuccessful();
         } else {
           logNoChanges();
         }
