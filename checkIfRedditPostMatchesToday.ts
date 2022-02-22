@@ -1,6 +1,6 @@
-export function checkIfRedditPostMatchesToday(someDate): boolean {
+export function checkIfRedditPostMatchesToday(postDate): boolean {
     const today = new Date()
-    return someDate.getDate() == today.getDate() &&
-      someDate.getMonth() == today.getMonth() &&
-      someDate.getFullYear() == today.getFullYear()
+    return postDate.getDate() === today.getDate() &&
+    postDate.getMonth() === today.getMonth() &&
+    postDate.getFullYear() === today.getFullYear();
 }
